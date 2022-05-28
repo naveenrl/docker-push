@@ -10,7 +10,7 @@ jobs:
       - uses: anchore/scan-action@v3
         with:
           image: "localbuild/testimage:latest"
-          fail-build: false
+          fail-build: true
       - name: Login to DockerHub
         uses: docker/login-action@v2
         with:

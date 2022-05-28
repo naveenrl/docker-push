@@ -21,4 +21,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: naveenr211/anchor-jenkins:testimage:latest 
+          tags: naveenr211/anchor-jenkins:testimage

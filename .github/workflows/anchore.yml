@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build the container image
-        run: docker build . --file Dockerfile --tag localbuild/testimage:latest
+        run: docker build . --file Dockerfile --tag localbuild/testimage1:latest
       - uses: anchore/scan-action@v3
         with:
           image: "localbuild/testimage:latest"
@@ -17,7 +17,7 @@ jobs:
           username: naveenr211
           password: c68671f2-540c-400e-a17a-d2bb6305a5a9
       -
-        name: Build and push
+        name: Build and Push
         uses: docker/build-push-action@v3
         with:
           push: true
